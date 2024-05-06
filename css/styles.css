@@ -101,8 +101,9 @@ section {
 .menu-list-link:focus,
 .menu-list-link:active {
   color: #404bbf;
+  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.span-active-studio {
+.span-active-studio:active {
   text-decoration: underline;
 }
 .address-info {
@@ -124,6 +125,7 @@ section {
 .address-info-link:hover,
 .address-info-link:focus {
   color: #404bbf;
+  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ===HERO=== */
 .hero-section {
@@ -135,9 +137,14 @@ section {
   margin-right: auto;
   padding-top: 188px;
   padding-bottom: 188px;
-  background-image: url("../images/people-office\ 1.jpg");
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office1.jpg);
   background-repeat: no-repeat;
-  height: 600px;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -173,6 +180,7 @@ section {
 .hero-button:hover,
 .hero-button:focus {
   background: #404bbf;
+  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ===OUR BEENEFITS=== */
 
@@ -187,13 +195,7 @@ section {
   justify-content: flex-start;
 }
 .benefits-list-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 8px;
   width: calc((100% - 24px * 3) / 4);
-  height: 104px;
 }
 .benefits-list-title {
   margin-bottom: 8px;
@@ -206,6 +208,13 @@ section {
   letter-spacing: 0.02em;
   color: #434455;
 }
+.icon-benefits {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
 /* ===Our Team=== */
 .section-our-team {
   background: #f4f4fd;
@@ -269,6 +278,36 @@ section {
   color: #434455;
   text-align: center;
 }
+.team-social-list {
+  display: flex;
+  align-items: center;
+}
+.team-social-link {
+  fill: #4d5ae5;
+  /* display: block; */
+  line-height: 0;
+  /* background-color: #404bbf; */
+  display: inline-block;
+  position: relative;
+}
+.team-social-list {
+  column-gap: 24px;
+}
+.team-social-link::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #404bbf;
+  border-radius: 50%;
+  z-index: -1;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+  stroke: #404bbf;
+  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* ===OUR PORTFOLIO=== */
 .section-portfolio {
   background-color: #ffffff;
@@ -282,10 +321,8 @@ section {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-  width: 218px;
+
   margin-bottom: 72px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .portfolio-list {
   display: flex;
