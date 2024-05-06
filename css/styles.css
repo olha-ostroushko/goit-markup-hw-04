@@ -59,6 +59,8 @@ section {
 /* ===HEADER=== */
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container-page-nav {
   display: flex;
@@ -97,11 +99,15 @@ section {
   padding-top: 24px;
   padding-bottom: 24px;
 }
+#link-studio {
+  position: relative;
+  color: #404bbf;
+}
 .menu-list-link:hover,
 .menu-list-link:focus,
 .menu-list-link:active {
   color: #404bbf;
-  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .span-active-studio:active {
   text-decoration: underline;
@@ -125,7 +131,7 @@ section {
 .address-info-link:hover,
 .address-info-link:focus {
   color: #404bbf;
-  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ===HERO=== */
 .hero-section {
@@ -180,7 +186,7 @@ section {
 .hero-button:hover,
 .hero-button:focus {
   background: #404bbf;
-  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ===OUR BEENEFITS=== */
 
@@ -208,13 +214,22 @@ section {
   letter-spacing: 0.02em;
   color: #434455;
 }
-.icon-benefits {
+/* .icon-benefits { 
   width: 64px;
   height: 64px;
   display: flex;
   align-items: center;
+}*/
+.benefits-list-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  margin-bottom: 8px;
 }
-
 /* ===Our Team=== */
 .section-our-team {
   background: #f4f4fd;
@@ -291,7 +306,23 @@ section {
   position: relative;
 }
 .team-social-list {
-  column-gap: 24px;
+  justify-content: center;
+  gap: 24px;
+}
+.team-social-item {
+  width: 40px;
+  height: 40px;
+}
+.team-social-link {
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-social-icon {
+  fill: #f4f4fd;
 }
 /* .team-social-link::before { 
   content: "";
