@@ -443,6 +443,7 @@ section {
 .page-footer-container {
   display: flex;
   align-items: baseline;
+  margin-right: 120px;
  
 }
 .container-footer {
