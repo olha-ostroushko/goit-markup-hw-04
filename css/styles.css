@@ -441,15 +441,17 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  
 }
 .page-footer-container {
   display: flex;
   align-items: baseline;
+  margin-left: 156px;  
  
 }
 .container-footer {
   display: block;
-  margin-left: 156px;  
+  /*  */
   width: 264px;
   height: 112px;
   padding-left: 0;
@@ -479,8 +481,7 @@ section {
   margin-bottom: 16px;
 }
 .container-foot-social {
- row-gap: 16px;
-  margin-right: 120px;
+ row-gap: 16px; 
 }
 .team-social-list-footer {
   display: flex;
