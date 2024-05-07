@@ -445,7 +445,6 @@ section {
 .page-footer-container {
   display: flex;
   align-items: baseline;
-
  
 }
 .container-footer {
@@ -480,7 +479,7 @@ section {
   margin-bottom: 16px;
 }
 .container-foot-social {
-  row-gap: 16px;
+ row-gap: 16px;
   margin-right: 120px;
 }
 .team-social-list-footer {
